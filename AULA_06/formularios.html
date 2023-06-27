@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulários</title>
+</head>
+
+<body>
+    <h1>Trabalhando com formulários</h1>
+    <hr>
+    <p>Elementos para formulários são volstados à interação com o usuário.
+        Entrada de dados, seleção de opções, processamento para manipulação
+        de dados entre outros.
+    </p>
+    <p>Formulários no HTLM são somente uma <b>Interface</b>.</p>
+    <p>Para que o formulário funcione é necessário combiná-lo com usamos
+        <b>Linguagem de Programação</b>.
+    </p>
+
+    <h2><b>Exemplos</b></h2>
+
+    <form action="#" method="post">
+        <p>
+            <!--required= é um campo obrigatório // todo campo precisa ter um id // maxLength
+            é o máximo de caracteres permitido e o minLength é o minimo permitido-->
+            <label for="nome">Nome</label>
+            <input required type="text" id="nome" name="nome" placeholder=
+            "Informe seu nome completo" maxlength="50">
+        </p>
+
+        <p>
+            <label for="email">E-mail</label>
+            <input required type="email" id="email" nome="email">
+        </p>   
+
+        <p>
+            <label for="telefone">Telefone</label>
+            <input  type="tel" id="telefone" nome="telefone">
+        </p>
+
+        <p>
+            <label for="celula">Celular</label>
+            <input required type="tel" id="Celular" nome="Celular">
+        </p>
+        <p>Você está trabalhando?</p>
+        <p>
+            <!--o campo name deve ser igual uma vez que se refere a pergunta que está sendo
+            feita, por isso, é necessário termos cuidado quando usamos o radiobutton, pois
+            ele precisa estar com o mesmo nome em todas as opções -->
+            <input type="radio" id="sim" name="trabalha" value="SIM">
+            <label for="sim">SIM</label>
+
+            <input type="radio" id="não" name="trabalha" value="NÂO">
+            <label for="não">NÃO</label>
+        </p>
+            
+        <p>Interesses:</p>
+        <p>
+            <input type="checkbox" id="html5" name="Interesses">
+            <label for="html5">HTML5</label>
+            
+            <input type="checkbox" id="css3" name="Interesses">
+            <label for="css3">CSS3</label>
+            
+            <input type="checkbox" id="javascript" name="Interesses">
+            <label for="checkbox">JavaScript</label>
+        </p>
+        <p>
+            <label for="nascimento">Nascimento</label>
+            <input type="date" id="nascimento" name="nascimento">
+        </p>
+        <p>
+            <label for="cor">Qual sua cor favorita?</label>
+            <input type="color" id="cor" name="cor">
+        </p>
+
+        <p>
+            <label for="idade">Idade</label>
+            <input type="number" id="idade" name="idade">
+        </p>
+
+        <p>
+            <!--Aqui o valor deve ficar vazio assim, o banco entenderá que apenas o valor 
+            selecionado deve ser levado em conta-->
+            <label for="assunto">Assunto</label>
+            <select name="assunto" id="assunto">
+                <option selected disabled value="">Selecione uma opção</option>
+                <!--<option |hidden| value="">Selecione uma opção</option> essa tambem é uma 
+                opção válida-->
+                <option value="elogios">Elogios </option>
+                <option value="reclamações">Reclamações</option>
+                <option value="sugestões">Sugestões</option>
+            </select>
+        </p>
+
+        <p>
+            <!--cada string dentro da caixa é uma coluna-->
+            <label for="mensagem">Deixe sua mensagem</label>
+            <textarea name="mensagem" id="mensagem" cols="20" rows="5"></textarea>
+        </p>
+
+        <p>
+            <button type="submit">Enviar</button>
+        </p>
+
+    </form>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
